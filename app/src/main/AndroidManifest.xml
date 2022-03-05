@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.omnicoder.unipass">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".Activities.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Unipass">
+        <activity android:name=".Activities.ImportExportCSVActivity"></activity>
+        <activity android:name=".Activities.AboutActivity" />
+
+        <service
+            android:name=".Services.AutoLockService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Services.ClipboardCleanupService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".Activities.BackupAndRestoreActivity" />
+        <activity
+            android:name=".Activities.ChangeMasterPasswordActivity"
+            android:parentActivityName=".Activities.HomeActivity" />
+        <activity
+            android:name=".Activities.ViewLoginActivity"
+            android:parentActivityName=".Activities.HomeActivity"
+            android:theme="@style/Theme.Unipass"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".Activities.GeneratorActivity" />
+        <activity
+            android:name=".Activities.EditLoginActivity"
+            android:parentActivityName=".Activities.ViewLoginActivity"
+            android:theme="@style/Theme.Unipass" />
+        <activity
+            android:name=".Activities.AddLoginActivity"
+            android:parentActivityName=".Activities.HomeActivity"
+            android:theme="@style/Theme.Unipass" />
+        <activity
+            android:name=".Activities.HomeActivity"
+            android:theme="@style/Theme.Unipass"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activities.NewUserActivity"
+            android:theme="@style/Theme2.Unipass"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Activities.LockActivity"
+            android:theme="@style/Theme2.Unipass"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".Services.AutoBackupService"
+            android:enabled="true" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

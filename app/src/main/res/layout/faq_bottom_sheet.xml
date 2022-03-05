@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="350dp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:orientation="vertical"
+        android:padding="3dp">
+
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/barShape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/modal_bottom_sheet_bar"
+           />
+        <LinearLayout
+            android:id="@+id/TitleLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/barShape"
+            android:layout_margin="3dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/faqIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/barShape"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_toStartOf="@+id/barTitle"
+                android:padding="0dp"
+                android:visibility="visible"
+                app:srcCompat="@drawable/ic_faq"
+                app:tint="@color/blue" />
+
+
+        <TextView
+            android:id="@+id/barTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/roboto_bold"
+            android:padding="5dp"
+            android:text="Frequently Asked Questions"
+            android:textColor="@color/blue"
+            android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/Q1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginEnd="5sp"
+            android:layout_marginBottom="5sp"
+            android:layout_toStartOf="@+id/ImgBtn1"
+            android:clickable="true"
+            android:layout_below="@+id/TitleLinearLayout"
+            android:padding="5sp"
+            android:text="What if the lost/forgot my master password?"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ImgBtn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="5sp"
+            android:layout_marginLeft="5sp"
+            android:layout_below="@+id/TitleLinearLayout"
+            android:layout_marginTop="5sp"
+            android:layout_marginEnd="5sp"
+            android:layout_marginRight="5sp"
+            android:layout_marginBottom="5sp"
+            android:clickable="true"
+            android:padding="5sp"
+            android:src="@drawable/ic_keyboard_arrow_down" />
+
+        <TextView
+            android:id="@+id/A1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Q1"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginEnd="5sp"
+            android:layout_marginBottom="5sp"
+
+            android:layout_toStartOf="@+id/ImgBtn1"
+            android:clickable="true"
+            android:padding="5sp"
+            android:text="Once master password is lost/forgetton, it cannot be recovered. Only you have access to the master password and no one else can recover it. You will also need your master password in order to restore your backup."
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/Q2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/A1"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginEnd="5sp"
+            android:layout_marginBottom="5sp"
+            android:layout_toStartOf="@+id/ImgBtn2"
+            android:clickable="true"
+            android:padding="5sp"
+            android:text="How do I make a backup?"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ImgBtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/A1"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="5sp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginEnd="5sp"
+            android:layout_marginRight="5sp"
+            android:layout_marginBottom="5sp"
+            android:clickable="true"
+            android:padding="5sp"
+            android:src="@drawable/ic_keyboard_arrow_down" />
+
+        <TextView
+            android:id="@+id/A2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Q2"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginEnd="5sp"
+            android:layout_marginBottom="5sp"
+            android:layout_toStartOf="@+id/ImgBtn2"
+            android:clickable="true"
+            android:padding="5sp"
+            android:text="To make a backup, please do the following: \n 1. Go to settings. \n 2. Click on the Backup and Restore. \n 3. Click on the Backup Now button."
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/Q3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/A2"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginEnd="5sp"
+            android:layout_marginBottom="5sp"
+            android:layout_toStartOf="@+id/ImgBtn3"
+            android:clickable="true"
+            android:padding="5sp"
+            android:text="How do I restore a backup?"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ImgBtn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/A2"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="5sp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginEnd="5sp"
+            android:layout_marginRight="5sp"
+            android:layout_marginBottom="5sp"
+            android:clickable="true"
+            android:padding="5sp"
+            android:src="@drawable/ic_keyboard_arrow_down" />
+
+        <TextView
+            android:id="@+id/A3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Q3"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginEnd="5sp"
+            android:layout_marginBottom="5sp"
+            android:layout_toStartOf="@+id/ImgBtn3"
+            android:clickable="true"
+            android:padding="5sp"
+            android:text="To restore a backup, clicked on RESTORE button on the top of the password screen, choose the backup, then enter the password and click on Restore. All your saved passwords wil be restored."
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/Q4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/A3"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginEnd="5sp"
+            android:layout_marginBottom="5sp"
+            android:layout_toStartOf="@+id/ImgBtn4"
+            android:clickable="true"
+            android:padding="5sp"
+            android:text="@string/backupq1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ImgBtn4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/A3"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="5sp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginEnd="5sp"
+            android:layout_marginRight="5sp"
+            android:layout_marginBottom="5sp"
+            android:clickable="true"
+            android:padding="5sp"
+            android:src="@drawable/ic_keyboard_arrow_down" />
+
+        <TextView
+            android:id="@+id/A4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Q4"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginEnd="5sp"
+            android:layout_marginBottom="5sp"
+            android:layout_toStartOf="@+id/ImgBtn4"
+            android:clickable="true"
+            android:padding="5sp"
+            android:text="@string/backupQ"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+
+
+    </RelativeLayout>
+
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Unipass</string>
+    <string name="logins">Logins</string>
+    <string name="notes">Notes</string>
+    <string name="category">Choose Category</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="long_press_on_the_password_to_copy">Long press on the password to copy.</string>
+    <string name="backupQ">Your backups will be stored in an encrypted form. This app uses AES-256 Algorithm to encypt passwords and the backups.</string>
+    <string name="backupq1">How the backup are stored?</string>
+    <string name="enter_password_here">Enter password here</string>
+    <string name="waring"><b>Please Note:</b> The exported CSV file will contain all your vault data in an <b>unencrypted</b> format. Make sure to store or send the CSV file carefully and delete it after using it.</string>
+
+
+</resources>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/barShape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:src="@drawable/modal_bottom_sheet_bar"
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:fontFamily="@font/roboto"
+        android:padding="3dp"
+        android:text="Sort By: "
+        android:layout_below="@+id/barShape"
+        android:textSize="18sp" />
+
+
+    <Button
+        android:id="@+id/AtoZ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="left"
+        android:padding="0dp"
+        android:text="A-Z"
+        android:textColor="@color/blue"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/DateAdded"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/AtoZ"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@null"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="left"
+        android:padding="0dp"
+        android:text="Date Added"
+        android:textColor="@color/blue"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/Modified"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/DateAdded"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@null"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="left"
+        android:padding="0dp"
+        android:text="Modified"
+        android:textColor="@color/blue"
+        android:textSize="18sp" />
+
+
+
+
+</RelativeLayout>

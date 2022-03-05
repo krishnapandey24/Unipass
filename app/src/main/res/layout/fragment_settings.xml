@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgwWhite"
+    tools:context=".Fragments.LoginFragment"
+    >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bgwWhite"
+    android:orientation="vertical"
+    tools:context=".Fragments.LoginFragment">
+
+
+
+
+    <LinearLayout
+        android:id="@+id/Database"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:background="@color/white">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Database"
+            android:textSize="16sp"
+            android:textColor="@color/blue"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_margin="5dp"
+            android:padding="5dp"/>
+
+
+
+
+        <TextView
+            android:id="@+id/backupDatabase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:text="Backup/Restore "
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_medium"
+            android:drawablePadding="8dp"
+            app:drawableTint="@color/blue"
+            android:clickable="true"
+            app:drawableStartCompat="@drawable/ic_backup"
+            app:drawableEndCompat="@drawable/ic_go_arrow" />
+
+        <TextView
+            android:id="@+id/importCSV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:text="Import/Export CSV"
+            android:textSize="18sp"
+            android:clickable="true"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_medium"
+            android:drawablePadding="8dp"
+            app:drawableTint="@color/blue"
+            app:drawableStartCompat="@drawable/ic_baseline_import_export_24"
+            app:drawableEndCompat="@drawable/ic_go_arrow"
+            android:focusable="true" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Security"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/Theme"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:background="@color/white">
+
+      
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Security"
+            android:textSize="16sp"
+            android:textColor="@color/blue"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_margin="5dp"
+            android:padding="5dp"/>
+
+        <TextView
+            android:id="@+id/changeMasterPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:text="Change master password"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_medium"
+            android:drawablePadding="8dp"
+            app:drawableTint="@color/blue"
+            android:clickable="true"
+            app:drawableStartCompat="@drawable/ic_baseline_https_24"
+            app:drawableEndCompat="@drawable/ic_go_arrow" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/blockScreenshots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:text="Block screenshots"
+            android:drawableTint="@color/blue"
+            android:drawableStart="@drawable/ic_baseline_not_interested_24"
+            android:textSize="18sp"
+            android:fontFamily="@font/roboto_medium"
+            android:drawablePadding="8dp">
+
+        </com.google.android.material.switchmaterial.SwitchMaterial>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:padding="5dp">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/copyIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_copy"
+                android:tint="@color/blue"
+                app:layout_constraintBottom_toBottomOf="@+id/clearClipboard"
+                app:layout_constraintEnd_toStartOf="@+id/clearClipboard"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/clearClipboard" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/clearClipboard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+               
+                android:fontFamily="@font/roboto_medium"
+                 
+                android:text="Clear clipboard"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/copyIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/cleanDelayView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               
+                android:layout_marginTop="-2dp"
+                android:fontFamily="@font/roboto"
+                 
+                android:paddingStart="3dp"
+                android:paddingEnd="3dp"
+                android:text="Automatically clear clipboard after\na certain period of time"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/clearClipboard"
+                app:layout_constraintTop_toBottomOf="@+id/clearClipboard" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clipboardCleanupDelay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:padding="5dp">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/timeLapseIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_baseline_timelapse_24"
+                android:tint="@color/blue"
+                app:layout_constraintBottom_toBottomOf="@+id/clipboardDelay"
+                app:layout_constraintEnd_toStartOf="@+id/clipboardDelay"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/clipboardDelay" />
+
+            <TextView
+                android:id="@+id/clipboardDelay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Clipboard cleanup delay"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:drawableEndCompat="@drawable/ic_go_arrow"
+                app:drawableTint="@color/blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/timeLapseIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/cleanupDelayView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/roboto"
+
+                android:paddingStart="3dp"
+                android:paddingEnd="3dp"
+                android:text="30 seconds"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/clipboardDelay"
+                app:layout_constraintTop_toBottomOf="@+id/clipboardDelay" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="5dp">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/autoLockIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_baseline_phonelink_lock_24"
+                android:tint="@color/blue"
+                app:layout_constraintBottom_toBottomOf="@+id/autoLockSwitch"
+                app:layout_constraintEnd_toStartOf="@+id/autoLockSwitch"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/autoLockSwitch" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/autoLockSwitch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Auto Lock"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/autoLockIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/autoLockSwitchView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-2dp"
+                android:fontFamily="@font/roboto"
+                android:paddingStart="3dp"
+                android:paddingEnd="3dp"
+                android:text="Automatically locks the app when phone \nis locked or when the app is not in use"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/autoLockSwitch"
+                app:layout_constraintTop_toBottomOf="@+id/autoLockSwitch" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/autoLockDelay2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="5dp">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/timeLapseIcon2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginEnd="8dp"
+
+                android:src="@drawable/ic_baseline_timelapse_24"
+                android:tint="@color/blue"
+                app:layout_constraintBottom_toBottomOf="@+id/autoLockDelay"
+                app:layout_constraintEnd_toStartOf="@+id/autoLockDelay"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/autoLockDelay" />
+
+            <TextView
+                android:id="@+id/autoLockDelay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/roboto_medium"
+
+                android:text="Auto lock delay"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:drawableEndCompat="@drawable/ic_go_arrow"
+                app:drawableTint="@color/blue"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toEndOf="@+id/timeLapseIcon2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/autoLockDelayView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/roboto"
+
+                android:paddingStart="3dp"
+                android:paddingEnd="3dp"
+                android:text="Immediately"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/autoLockDelay"
+                app:layout_constraintTop_toBottomOf="@+id/autoLockDelay" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/helpAndAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/Theme"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:background="@color/white">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Help and About"
+            android:textSize="16sp"
+            android:textColor="@color/blue"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_margin="5dp"
+            android:padding="5dp"/>
+
+        <TextView
+            android:id="@+id/aboutUnipass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:text="About UniPass"
+            android:textSize="18sp"
+            android:fontFamily="@font/roboto_medium"
+            android:drawablePadding="8dp"
+            app:drawableEndCompat="@drawable/ic_go_arrow"
+            app:drawableTint="@color/blue"
+            app:drawableStartCompat="@drawable/ic_info" />
+
+        <TextView
+            android:id="@+id/faq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:text="Frequently asked questions"
+            android:textSize="18sp"
+            android:fontFamily="@font/roboto_medium"
+            android:drawablePadding="8dp"
+            app:drawableEndCompat="@drawable/ic_go_arrow"
+            app:drawableTint="@color/blue"
+            app:drawableStartCompat="@drawable/ic_faq" />
+
+        <TextView
+            android:id="@+id/reportABug"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:text="Report a bug"
+            android:textSize="18sp"
+            android:fontFamily="@font/roboto_medium"
+            android:drawablePadding="8dp"
+            app:drawableEndCompat="@drawable/ic_go_arrow"
+            app:drawableTint="@color/blue"
+            app:drawableStartCompat="@drawable/ic_baseline_bug_report_24" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/Extras"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/Theme"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:background="@color/white">
+
+
+
+        <TextView
+            android:id="@+id/deleteAllData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:text="Delete all Data"
+            android:textSize="18sp"
+            android:fontFamily="@font/roboto_medium"
+            android:drawablePadding="8dp"
+            app:drawableEndCompat="@drawable/ic_go_arrow"
+            app:drawableTint="@android:color/holo_red_light"
+            app:drawableStartCompat="@drawable/ic_baseline_delete_forever_24" />
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
+</ScrollView>

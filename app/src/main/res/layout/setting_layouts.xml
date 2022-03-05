@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="5dp">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/autoLcokIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_baseline_phonelink_lock_24"
+            android:tint="@color/blue"
+            app:layout_constraintBottom_toBottomOf="@+id/autoLockDelay"
+            app:layout_constraintEnd_toStartOf="@+id/autoLockDelay"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/autoLockDelay" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/autoLockDelay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Auto Lock"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/autoLcokIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/autoLockDelayView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-2dp"
+            android:fontFamily="@font/roboto"
+            android:paddingStart="3dp"
+            android:paddingEnd="3dp"
+            android:text="Automatically locks the app when phone \nis locked or when the app is not in use"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/autoLockDelay"
+            app:layout_constraintTop_toBottomOf="@+id/autoLockDelay" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

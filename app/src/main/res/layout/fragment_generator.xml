@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bgwWhite">
+    <TextView
+        android:id="@+id/generatedPasswordView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/round_rectangle_shape"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:padding="15dp"
+        android:clickable="true"
+        android:onClick="onLongClick"
+        android:text="cDSVKctQx71hCKnu"
+        android:textColor="@color/blue"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/copyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/generatedPasswordView"
+        android:layout_centerHorizontal="true"
+        android:drawablePadding="5dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/long_press_on_the_password_to_copy"
+        android:textSize="15sp"
+        app:drawableStartCompat="@drawable/ic_baseline_content_copy_24" />
+
+    <Button
+        android:id="@+id/generateButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/copyTextView"
+        android:layout_margin="15dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:paddingVertical="10dp"
+        android:text="GENERATE PASSWORD"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/round_rectangle_shape"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/generateButton">
+
+    <TextView
+        android:id="@+id/lengthTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Password Length: "
+        android:textColor="@color/blue"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/TotalLengthTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/lengthTextView"
+            android:fontFamily="@font/roboto_medium"
+            android:text="8"
+            android:textColor="@color/blue"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lengthTextView"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/round_rectangle_shape"
+            android:padding="20dp" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/lettersSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:padding="18dp"
+        android:background="@drawable/round_rectangle_shape"
+        android:text="Include letters"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/blue"
+        android:layout_below="@+id/LinearLayout"
+        />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/numbersSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:padding="18dp"
+        android:background="@drawable/round_rectangle_shape"
+        android:text="Include numbers"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/blue"
+        android:layout_below="@+id/lettersSwitch"
+        />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/symbolsSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="15dp"
+        android:padding="18dp"
+        android:background="@drawable/round_rectangle_shape"
+        android:text="Include symbols"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/blue"
+        android:layout_below="@+id/numbersSwitch"
+        />
+
+
+
+
+</RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

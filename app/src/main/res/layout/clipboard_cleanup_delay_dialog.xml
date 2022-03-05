@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Clipboard Cleanup Delay"
+        android:textColor="@color/blue"
+        android:textSize="22sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+        <RadioButton
+            android:id="@+id/immediately"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:padding="5dp"
+            android:text="5 seconds"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/weekly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:fontFamily="@font/roboto_medium"
+            android:padding="5dp"
+            android:text="10 seconds"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/monthly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:padding="5dp"
+            android:text="30 seconds"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/yearly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:padding="5dp"
+            android:text="1 minute"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/yearly2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:padding="5dp"
+            android:text="2 minutes"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/yearly3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:padding="5dp"
+            android:text="5 minutes"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Cancel"
+        android:clickable="true"
+        android:textColor="@color/blue"
+        android:textSize="16sp"
+        android:layout_gravity="end"/>
+
+
+</LinearLayout>
