@@ -15,31 +15,7 @@ UniPass is a robust Android password manager developed using Java in Android Stu
 - **Password Strength Meter**: Evaluate the strength of your passwords for enhanced security.
 - **Backup Functionality**: Take encrypted backups of your password database for added peace of mind.
 - **Intuitive Interface**: User-friendly design for smooth navigation and ease of use.
-- *(Add any additional unique features here)*
 
-
-
-
-### Getting Started
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/your-username/Unipass.git
-   ```
-
-2. **Open in Android Studio**: Import the project into Android Studio to start exploring and contributing.
-
-3. **Build and Run**: Compile the project and run it on an emulator or a physical device to test its functionality.
-
-### Contributing
-
-We welcome contributions from the community! If you'd like to contribute to UniPass, please follow these steps:
-
-1. Fork the repository.
-2. Create your branch (`git checkout -b feature/YourFeature`).
-3. Commit your changes (`git commit -am 'Add YourFeature'`).
-4. Push to the branch (`git push origin feature/YourFeature`).
-5. Create a new Pull Request.
 
 
 
